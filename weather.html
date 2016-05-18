@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- version 1.3 - 2016.5/19.04:37:AM. coding is fucking tired -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="mycss.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6">
+      <!-- Large button group -->
+      <div class="btn-group">
+
+        <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+          Taipei <span class="caret"></span>
+        </button>
+        <ul id="dropdown" class="dropdown-menu" role="menu">
+              <li role="presentation" data="2306179"><a role="menuitem" tabindex="-1" href="#">天龍市<span id="temperature"></span></a></li>
+              <li role="presentation" data="90717580"><a role="menuitem" tabindex="-1" href="#">新北市<span id="temperature"></span></a></li>
+              <li role="presentation" data="2306181"><a role="menuitem" tabindex="-1" href="#">台中市<span id="temperature"></span></a></li>
+              <li role="presentation" data="2306182"><a role="menuitem" tabindex="-1" href="#">台南市<span id="temperature"></span></a></li>
+              <li role="presentation" data="2306180"><a role="menuitem" tabindex="-1" href="#">高雄市<span id="temperature"></span></a></li>
+              <li role="presentation" data="2306188"><a role="menuitem" tabindex="-1" href="#">基隆市<span id="temperature"></span></a></li>
+              <li role="presentation" data="91982232"><a role="menuitem" tabindex="-1" href="#">桃園市<span id="temperature"></span></a></li>
+              <li role="presentation" data="2306185"><a role="menuitem" tabindex="-1" href="#">新竹市<span id="temperature"></span></a></li>
+              <li role="presentation" data="28776691"><a role="menuitem" tabindex="-1" href="#">新竹縣<span id="temperature"></span></a></li>
+              <li role="presentation" data="28776722"><a role="menuitem" tabindex="-1" href="#">苗栗縣<span id="temperature"></span></a></li>
+              <li role="presentation" data="91290191"><a role="menuitem" tabindex="-1" href="#">彰化縣<span id="temperature"></span></a></li>
+              <li role="presentation" data="56800736"><a role="menuitem" tabindex="-1" href="#">南投縣<span id="temperature"></span></a></li>
+              <li role="presentation" data="28776037"><a role="menuitem" tabindex="-1" href="#">雲林縣<span id="temperature"></span></a></li>
+              <li role="presentation" data="2296315"><a role="menuitem" tabindex="-1" href="#">嘉義市<span id="temperature"></span></a></li>
+              <li role="presentation" data="91979309"><a role="menuitem" tabindex="-1" href="#">嘉義縣<span id="temperature"></span></a></li>
+              <li role="presentation" data="91290319"><a role="menuitem" tabindex="-1" href="#">屏東縣<span id="temperature"></span></a></li>
+              <li role="presentation" data="91290369"><a role="menuitem" tabindex="-1" href="#">宜蘭縣<span id="temperature"></span></a></li>
+              <li role="presentation" data="56793525"><a role="menuitem" tabindex="-1" href="#">花蓮縣<span id="temperature"></span></a></li>
+              <li role="presentation" data="91290354"><a role="menuitem" tabindex="-1" href="#">台東縣<span id="temperature"></span></a></li>
+              <li role="presentation" data="28769297"><a role="menuitem" tabindex="-1" href="#">澎湖縣<span id="temperature"></span></a></li>
+              <li role="presentation" data="90413659"><a role="menuitem" tabindex="-1" href="#">金門縣<span id="temperature"></span></a></li>
+              <li role="presentation" data="90413142"><a role="menuitem" tabindex="-1" href="#">連江縣<span id="temperature"></span></a></li>
+
+        </ul>        
+      </div>
+
+      <div id="currTemp"><span class="temperature">23</span> &#8451;</div>
+    </div>
+    <div class="col-xs-6">
+      <canvas id="today" width="100" height="100"></canvas>
+      <div>
+          <span class="date">4 May 2015</span><span class="condition"></span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Forecast</div>
+
+            <!-- Table -->
+            <table class="table">
+              <thead>
+                <tr class="foreDate">
+                  <th>5 May 2015</th>
+                  <th>6 May 2015</th>
+                  <th>7 May 2015</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="foreTemp">
+                  <td>17-23 &#8451;</td>
+                  <td>18-26 &#8451;</td>
+                  <td>15-24 &#8451;</td>
+                </tr>
+                <tr>
+                  <td><canvas id="day1" width="64" height="64">Clear</canvas></td>
+                  <td><canvas id="day2" width="64" height="64">Mostly Sunny</canvas></td>
+                  <td><canvas id="day3" width="64" height="64">Mostly Cloudy</canvas></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+<script src="https://darkskyapp.github.io/skycons/skycons.js"></script>
+<script src="myapp.js"></script>
+
+</body>
+</html>
